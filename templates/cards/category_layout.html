@@ -1,0 +1,23 @@
+
+{% load static %}
+
+<div class="py-20 px-10 mt-20 flex justify-center">
+    <div class=" flex w-5/6 ">
+
+        {% for data in category %}
+    
+        <div class="w-36 h-36 m-5" id="category_card">    
+              
+                <div class=" flex justify-center items-center w-24 h-24 bg-gray-200 rounded-xl  hover:bg-orange-600 cursor-pointer ">
+                    <img src="{{data.cat_image.url}}" class="w-16 h-16 object-cover rounded-full hover:w-20 hover:h-20 trasition-all " />
+                </div>
+              
+            
+        
+            <h2 class="text-gray-800 text-sm mt-4 text-center"> {{data.name}}</h2>
+            
+            </div>
+    
+        {% endfor %}
+    </div>
+</div>
